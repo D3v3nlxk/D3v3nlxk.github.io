@@ -10,16 +10,16 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="第二章 感知机一个感知机相当于数字电路里面的一个门电路，多层感知机实现完整电路，以下是与门、与非门和或门的基础实现代码以及原理。$$y&#x3D;\begin{cases}0, &amp;(b+w1x1+w2x2 \leq 0)\1, &amp;(b+w1x1+w2x2 &gt; 0)\\end{cases}$$其中b称为偏置,w1和w2称为权重。 123456789101112131415161">
+  <meta name="description" content="第二章 感知机​	一个感知机相当于数字电路里面的一个门电路，多层感知机实现完整电路，以下是与门、与非门和或门的基础实现代码以及原理。$$y&#x3D;\begin{cases}0, &amp;(b+w1x1+w2x2 \leq 0)\1, &amp;(b+w1x1+w2x2 &gt; 0)\\end{cases}$$​	其中b称为偏置,w1和w2称为权重。 12345678910111213141">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://example.com/2024/03/30/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%84%9F%E7%9F%A5%E6%9C%BA/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="第二章 感知机一个感知机相当于数字电路里面的一个门电路，多层感知机实现完整电路，以下是与门、与非门和或门的基础实现代码以及原理。$$y&#x3D;\begin{cases}0, &amp;(b+w1x1+w2x2 \leq 0)\1, &amp;(b+w1x1+w2x2 &gt; 0)\\end{cases}$$其中b称为偏置,w1和w2称为权重。 123456789101112131415161">
+<meta property="og:description" content="第二章 感知机​	一个感知机相当于数字电路里面的一个门电路，多层感知机实现完整电路，以下是与门、与非门和或门的基础实现代码以及原理。$$y&#x3D;\begin{cases}0, &amp;(b+w1x1+w2x2 \leq 0)\1, &amp;(b+w1x1+w2x2 &gt; 0)\\end{cases}$$​	其中b称为偏置,w1和w2称为权重。 12345678910111213141">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-03-30T06:58:13.551Z">
-<meta property="article:modified_time" content="2024-03-30T07:47:51.050Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:modified_time" content="2024-03-30T09:01:21.435Z">
+<meta property="article:author" content="D3v3n">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -66,7 +66,7 @@
 			<img src="/uploads/head.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-			<h1 class="header-author"><a href="/">John Doe</a></h1>
+			<h1 class="header-author"><a href="/">D3v3n</a></h1>
 		</hgroup>
 		
 
@@ -148,7 +148,7 @@
 				</a>
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">John Doe</h1>
+			  <h1 class="header-author js-header-author">D3v3n</h1>
 			</hgroup>
 			
 			
@@ -216,8 +216,8 @@
     
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="第二章-感知机"><a href="#第二章-感知机" class="headerlink" title="第二章 感知机"></a>第二章 感知机</h1><p>一个感知机相当于数字电路里面的一个门电路，多层感知机实现完整电路，以下是与门、与非门和或门的基础实现代码以及原理。<br>$$<br>y&#x3D;\begin{cases}<br>0, &amp;(b+w1x1+w2x2 \leq 0)\<br>1, &amp;(b+w1x1+w2x2 &gt; 0)\<br>\end{cases}<br>$$<br>其中b称为<strong>偏置</strong>,w1和w2称为<strong>权重</strong>。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">AND</span>(<span class="params">x1,x2</span>):             <span class="comment">#与门的实现</span></span><br><span class="line">    x=np.array([x1,x2])     <span class="comment">#输入</span></span><br><span class="line">    w=np.array([<span class="number">0.5</span>,<span class="number">0.5</span>])   <span class="comment">#权重</span></span><br><span class="line">    b=-<span class="number">0.7</span>                  <span class="comment">#偏置</span></span><br><span class="line">    tmp=np.<span class="built_in">sum</span>(w*x)+b       <span class="comment">#判断</span></span><br><span class="line">    <span class="keyword">if</span> tmp &lt;= <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    </span><br><span class="line"><span class="keyword">def</span> <span class="title function_">NAND</span>(<span class="params">x1,x2</span>):            <span class="comment">#与非门的实现</span></span><br><span class="line">    x=np.array([x1,x2])     <span class="comment">#输入</span></span><br><span class="line">    w=np.array([<span class="number">0.5</span>,<span class="number">0.5</span>])   <span class="comment">#权重</span></span><br><span class="line">    b=<span class="number">0.7</span>                   <span class="comment">#仅偏置与and不同</span></span><br><span class="line">    tmp=np.<span class="built_in">sum</span>(w*x)+b       <span class="comment">#判断</span></span><br><span class="line">    <span class="keyword">if</span> tmp &lt;= <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    </span><br><span class="line"><span class="keyword">def</span> <span class="title function_">OR</span>(<span class="params">x1,x2</span>):              <span class="comment">#或门的实现</span></span><br><span class="line">    x=np.array([x1,x2])     <span class="comment">#输入</span></span><br><span class="line">    w=np.array([<span class="number">0.5</span>,<span class="number">0.5</span>])   <span class="comment">#权重</span></span><br><span class="line">    b=-<span class="number">0.2</span>                  <span class="comment">#仅偏置与and不同</span></span><br><span class="line">    tmp=np.<span class="built_in">sum</span>(w*x)+b       <span class="comment">#判断</span></span><br><span class="line">    <span class="keyword">if</span> tmp &lt;= <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="number">2</span>):</span><br><span class="line">    <span class="keyword">for</span> y <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="number">2</span>):</span><br><span class="line">        <span class="built_in">print</span>(AND(x,y))</span><br></pre></td></tr></table></figure>
+    <h1 id="第二章-感知机"><a href="#第二章-感知机" class="headerlink" title="第二章 感知机"></a>第二章 感知机</h1><p>​	一个感知机相当于数字电路里面的一个门电路，多层感知机实现完整电路，以下是与门、与非门和或门的基础实现代码以及原理。<br>$$<br>y&#x3D;\begin{cases}<br>0, &amp;(b+w1x1+w2x2 \leq 0)\<br>1, &amp;(b+w1x1+w2x2 &gt; 0)\<br>\end{cases}<br>$$<br>​	其中b称为<strong>偏置</strong>,w1和w2称为<strong>权重</strong>。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np<br><span class="hljs-keyword">def</span> <span class="hljs-title function_">AND</span>(<span class="hljs-params">x1,x2</span>):             <span class="hljs-comment">#与门的实现</span><br>    x=np.array([x1,x2])     <span class="hljs-comment">#输入</span><br>    w=np.array([<span class="hljs-number">0.5</span>,<span class="hljs-number">0.5</span>])   <span class="hljs-comment">#权重</span><br>    b=-<span class="hljs-number">0.7</span>                  <span class="hljs-comment">#偏置</span><br>    tmp=np.<span class="hljs-built_in">sum</span>(w*x)+b       <span class="hljs-comment">#判断</span><br>    <span class="hljs-keyword">if</span> tmp &lt;= <span class="hljs-number">0</span>:<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span><br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span><br>    <br><span class="hljs-keyword">def</span> <span class="hljs-title function_">NAND</span>(<span class="hljs-params">x1,x2</span>):            <span class="hljs-comment">#与非门的实现</span><br>    x=np.array([x1,x2])     <span class="hljs-comment">#输入</span><br>    w=np.array([<span class="hljs-number">0.5</span>,<span class="hljs-number">0.5</span>])   <span class="hljs-comment">#权重</span><br>    b=<span class="hljs-number">0.7</span>                   <span class="hljs-comment">#仅偏置与and不同</span><br>    tmp=np.<span class="hljs-built_in">sum</span>(w*x)+b       <span class="hljs-comment">#判断</span><br>    <span class="hljs-keyword">if</span> tmp &lt;= <span class="hljs-number">0</span>:<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span><br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span><br>    <br><span class="hljs-keyword">def</span> <span class="hljs-title function_">OR</span>(<span class="hljs-params">x1,x2</span>):              <span class="hljs-comment">#或门的实现</span><br>    x=np.array([x1,x2])     <span class="hljs-comment">#输入</span><br>    w=np.array([<span class="hljs-number">0.5</span>,<span class="hljs-number">0.5</span>])   <span class="hljs-comment">#权重</span><br>    b=-<span class="hljs-number">0.2</span>                  <span class="hljs-comment">#仅偏置与and不同</span><br>    tmp=np.<span class="hljs-built_in">sum</span>(w*x)+b       <span class="hljs-comment">#判断</span><br>    <span class="hljs-keyword">if</span> tmp &lt;= <span class="hljs-number">0</span>:<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span><br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span><br><br><span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>,<span class="hljs-number">2</span>):<br>    <span class="hljs-keyword">for</span> y <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>,<span class="hljs-number">2</span>):<br>        <span class="hljs-built_in">print</span>(AND(x,y))<br></code></pre></td></tr></table></figure>
 
 
     
@@ -261,7 +261,7 @@
       <ul class="post-copyright">
         <li>
           <strong>本文作者：</strong>
-          John Doe
+          D3v3n
         </li>
         <li>
           <strong>本文链接：</strong>
@@ -392,7 +392,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2024 <a href="http://example.com/" target="_blank">John Doe</a>
+    		&copy; 2024 <a href="http://example.com/" target="_blank">D3v3n</a>
     	</div>
       	<div class="footer-right">
 			
