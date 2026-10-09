@@ -1,0 +1,110 @@
+/* A listening room, scoped away from posts, galleries and other sections. */
+.music-page .music-heading { width: 90%; max-width: 1200px; margin: auto; padding: 60px 0 45px; display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; }
+.music-heading .eyebrow { color: var(--accent); margin-bottom: 17px; font-size: 10px; }
+.music-heading h1 { margin: 0; font-size: clamp(30px,3.5vw,48px); color: var(--ink); font-weight: 500; letter-spacing: -1.5px; line-height: 1.4; }
+.music-serif { margin: 13px 0 0; color: var(--muted); font: italic 25px/1.4 Georgia,serif; }
+.music-heading-note { color: var(--muted); font-size: 12px; line-height: 2; margin: 0 0 4px; }
+.music-page .music-layout { display: block; padding: 0 0 45px; }
+.music-page .music-layout > #page, html.hide-aside .music-page .music-layout > #page { width: 100%; padding: 0; }
+.music-room { display: grid; grid-template-columns: 350px minmax(0,1fr); align-items: start; gap: 55px; }
+.music-page #article-container a { color: var(--ink); text-decoration: none; }
+.listening-player { position: sticky; top: 115px; padding: 26px; background: var(--soft); border: 1px solid var(--rule); border-radius: 3px; }
+.player-topline { display: flex; justify-content: space-between; font: 8px/1.5 monospace; letter-spacing: 1.2px; color: var(--muted); }
+.player-state { color: var(--accent); }
+.record-stage { display: grid; place-items: center; position: relative; margin: 28px 0; padding: 7px; }
+.vinyl-record { position: relative; width: 250px; max-width: 100%; aspect-ratio: 1; border-radius: 50%; background: repeating-radial-gradient(circle at center, #232621 0px, #232621 2px, #34372f 3px, #242722 4px); box-shadow: 0 9px 22px #0002; display: grid; place-items: center; animation: vinyl-spin 18s linear infinite; animation-play-state: paused; }
+.vinyl-record::before { content: ''; position: absolute; inset: 0; border-radius: 50%; background: conic-gradient(transparent 25deg,#ffffff10 65deg,transparent 105deg,transparent 205deg,#ffffff15 240deg,transparent 280deg); }
+.listening-player.is-playing .vinyl-record { animation-play-state: running; }
+.record-label { position: relative; width: 95px; height: 95px; background: #b94e31; color: #fff2df; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; }
+.record-label > span { font-size: 18px; font-weight: 600; letter-spacing: -1px; }
+.record-label > small { font: 6px monospace; letter-spacing: 1px; margin-top: 4px; }
+.record-label::after { content: ''; width: 7px; height: 7px; position: absolute; left: calc(50% - 3.5px); top: calc(50% - 3.5px); border-radius: 50%; background: #d6d3c6; box-shadow: 0 0 0 2px #2228; }
+.record-label:has(> span)::after { top: 72%; width: 5px; height: 5px; }
+.music-page #article-container .record-label img { margin: 0; width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+.record-needle { position: absolute; right: 2px; top: 0; width: 7px; height: 135px; background: linear-gradient(90deg,#afb2a5,#e8e7de,#8b9084); border-radius: 10px; transform: rotate(19deg); transform-origin: top center; box-shadow: 2px 2px 4px #0002; }
+.record-needle::after { content: ''; position: absolute; bottom: -9px; width: 12px; height: 30px; left: -2px; background: #60685b; border-radius: 2px; }
+.now-playing { text-align: center; }
+.now-playing .eyebrow { font-size: 8px; letter-spacing: 2px; color: var(--accent); margin-bottom: 10px; }
+.music-page #article-container .now-title { font-size: 21px; line-height: 1.6; font-weight: 500; margin: 0 0 8px; padding: 0; border: 0; overflow-wrap: anywhere; }
+.music-page #article-container .now-artist { color: var(--muted); font-size: 11px; margin: 0 0 22px; }
+.room-audio { display: block; width: 100%; height: 42px; }
+.player-actions { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: 16px; }
+.player-actions button, .player-actions a { color: var(--muted) !important; font-size: 10px; padding: 4px 0; background: none; border: 0; cursor: pointer; }
+.player-actions button:disabled { opacity: .4; cursor: default; }
+.player-actions .now-source[hidden] { display: none; }
+.music-page #article-container .player-message { margin: 21px 0 0; padding-top: 16px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 11px; line-height: 1.8; }
+.listening-player.has-error .player-message { color: var(--accent) !important; }
+.music-page #article-container .player-footnote { color: var(--muted); font-size: 10px; margin: 10px 0 0; opacity: .8; }
+.music-library { min-width: 0; }
+.music-jumps { display: flex; gap: 25px; align-items: center; padding: 14px 0 18px; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); font-size: 12px; }
+.music-jumps a > span { color: var(--muted); font: 9px monospace; margin-left: 8px; }
+.library-caption { margin-left: auto; font: 8px monospace; letter-spacing: 1px; color: var(--muted); }
+.music-section-heading { display: flex; justify-content: space-between; align-items: flex-end; margin: 30px 0 15px; }
+.music-section-heading .eyebrow { font-size: 8px; color: var(--accent); margin-bottom: 8px; }
+.music-page #article-container .music-section-heading h2 { margin: 0; padding: 0; border: 0; font-size: 25px; font-weight: 500; scroll-margin-top: 120px; }
+.music-section-heading > span, .music-section-heading > a { font-size: 10px; color: var(--muted) !important; padding-bottom: 3px; }
+.music-page #article-container .music-tracks { list-style: none; margin: 0; padding: 0; }
+.music-page #article-container .music-track { display: flex; align-items: center; gap: 14px; min-height: 94px; margin: 0; padding: 16px 0; border-bottom: 1px solid var(--rule); transition: background .2s; }
+.music-track.is-selected { background: var(--soft); }
+.track-play { flex: 0 0 30px; width: 30px; height: 38px; display: grid; place-items: center; border: 0; background: none; color: var(--muted); cursor: pointer; font: 10px monospace; }
+.track-play-glyph { display: none; font-size: 13px; color: var(--accent); }
+.track-play:hover .track-index, .track-play:focus-visible .track-index, .music-track.is-selected .track-index { display: none; }
+.track-play:hover .track-play-glyph, .track-play:focus-visible .track-play-glyph, .music-track.is-selected .track-play-glyph { display: block; }
+.music-page #article-container .track-cover { margin: 0; flex: 0 0 52px; width: 52px; height: 52px; border-radius: 3px; object-fit: cover; }
+.track-copy { flex: 1; min-width: 0; }
+.track-title { display: block; font-size: 13px; font-weight: 500; line-height: 1.6; overflow-wrap: anywhere; }
+.track-title:hover { color: var(--accent) !important; }
+.track-artist { display: block; margin-top: 3px; font-size: 10px; color: var(--muted); line-height: 1.6; }
+.track-platform { font-size: 9px; color: var(--muted); }
+.track-duration { font: 10px monospace; color: var(--muted); }
+.track-source { display: grid; place-items: center; width: 28px; height: 36px; color: var(--muted) !important; font-size: 17px; }
+.english-section { margin-top: 45px; }
+.playlist-cover-card { display: flex; align-items: center; gap: 18px; padding: 19px; background: var(--soft); margin-bottom: 6px; }
+.music-page #article-container .playlist-cover-card img { flex: 0 0 80px; width: 80px; height: 80px; margin: 0; border-radius: 3px; object-fit: cover; }
+.playlist-cover-card > div { flex: 1; min-width: 0; }
+.playlist-cover-card div > span { font: 8px monospace; letter-spacing: 1px; color: var(--muted); }
+.music-page #article-container .playlist-cover-card h3 { margin: 4px 0 5px; font-size: 17px; font-weight: 500; }
+.music-page #article-container .playlist-cover-card p { margin: 0; color: var(--muted); font-size: 10px; }
+.playlist-cover-card > span { color: var(--accent); font-size: 23px; }
+.music-page #article-container .playlist-tracks .music-track { min-height: 74px; }
+.music-page #article-container .playlist-note { margin: 17px 0 0; font-size: 10px; color: var(--muted); }
+.music-endnote { margin-top: 60px; padding-top: 25px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; color: var(--muted); font-size: 11px; }
+.music-endnote > :last-child { font: italic 17px Georgia,serif; }
+[data-theme='dark'] .music-page img { filter: none; }
+[data-theme='dark'] .room-audio { color-scheme: dark; }
+@keyframes vinyl-spin { to { transform: rotate(360deg); } }
+@media (max-width: 1050px) {
+ .music-room { grid-template-columns: 300px minmax(0,1fr); gap: 30px; }
+ .listening-player { padding: 20px; }
+ .vinyl-record { width: 225px; }
+ .track-platform { display: none; }
+ .library-caption { display: none; }
+ .music-page #article-container .music-track { gap: 10px; }
+}
+@media (max-width: 760px) {
+ .music-page .music-heading { width: 88%; display: block; padding: 38px 0 30px; }
+ .music-heading h1 { font-size: clamp(28px,6.6vw,40px); }
+ .music-serif { font-size: 22px; }
+ .music-heading-note { margin-top: 20px; font-size: 11px; }
+ .music-heading-note br { display: none; }
+ .music-page .music-layout { width: 88%; }
+ .music-room { grid-template-columns: 1fr; gap: 35px; }
+ .listening-player { position: static; padding: 22px; }
+ .record-stage { margin: 20px 0; }
+ .vinyl-record { width: 215px; }
+ .record-needle { right: 12%; height: 115px; }
+ .player-message { font-size: 11px; }
+ .music-page #article-container .music-section-heading h2 { font-size: 22px; }
+ .music-page #article-container .music-track { gap: 9px; min-height: 87px; }
+ .music-page #article-container .track-cover { flex-basis: 42px; width: 42px; height: 42px; }
+ .track-play { flex-basis: 23px; width: 23px; }
+ .track-index { display: none; }
+ .track-play-glyph { display: block; font-size: 11px; }
+ .track-title { font-size: 12px; }
+ .track-duration { font-size: 9px; }
+ .track-source { width: 23px; font-size: 16px; }
+ .music-endnote { gap: 20px; font-size: 10px; }
+ .music-endnote > :last-child { font-size: 13px; }
+}
+@media (prefers-reduced-motion: reduce) { .vinyl-record { animation: none !important; } }
+.music-page #article-container .track-availability { display: inline-block; margin-top: 4px; color: var(--accent); font-size: 10px; line-height: 1.6; }

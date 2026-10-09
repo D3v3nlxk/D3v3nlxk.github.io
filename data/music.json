@@ -1,0 +1,177 @@
+{
+  "recoveredFrom": "89e2128:music/index.html",
+  "metadataUpdated": "2026-09-10",
+  "songs": [
+    {
+      "id": "2124385868",
+      "server": "netease",
+      "type": "song",
+      "title": "如果爱忘了 (live)",
+      "artist": "汪苏泷 / 单依纯",
+      "duration": 245,
+      "cover": "/img/music/song-1.png",
+      "coverSource": "https://p1.music.126.net/3nL__2mV7k65XMoUw6Gu-g==/109951169721390560.jpg",
+      "url": "https://music.163.com/#/song?id=2124385868",
+      "audio": null,
+      "playbackNote": "公开音频外链返回错误页面，使用原平台收听。"
+    },
+    {
+      "id": "1335942780",
+      "server": "netease",
+      "type": "song",
+      "title": "九万字",
+      "artist": "黄诗扶",
+      "duration": 232,
+      "cover": "/img/music/song-2.png",
+      "coverSource": "https://p1.music.126.net/oVCpfPtfAqNcAbRWMU7ffA==/109951163801547166.jpg",
+      "url": "https://music.163.com/#/song?id=1335942780",
+      "audio": "https://music.163.com/song/media/outer/url?id=1335942780.mp3"
+    },
+    {
+      "id": "2034187125",
+      "server": "netease",
+      "type": "song",
+      "title": "沉溺 (你让我的心不再结冰）",
+      "artist": "邹沛沛 / Pank",
+      "duration": 194,
+      "cover": "/img/music/song-3.jpg",
+      "coverSource": "https://p1.music.126.net/WhsaW6an5oI4XZN0KhQ5fA==/109951168502947956.jpg",
+      "url": "https://music.163.com/#/song?id=2034187125",
+      "audio": null,
+      "playbackNote": "公开音频外链返回错误页面，使用原平台收听。"
+    },
+    {
+      "id": "000FSUIt42nDS4",
+      "server": "tencent",
+      "type": "song",
+      "title": "一刹那的烟火",
+      "artist": "余又 / 树泽",
+      "duration": 164,
+      "cover": "/img/music/song-4.jpg",
+      "coverSource": "https://y.gtimg.cn/music/photo_new/T002R300x300M000002ZE6p72xCvpC.jpg",
+      "url": "https://y.qq.com/n/ryqq/songDetail/000FSUIt42nDS4",
+      "audio": null
+    }
+  ],
+  "playlist": {
+    "id": "2829816518",
+    "server": "netease",
+    "type": "playlist",
+    "title": "欧美私人雷达 | 最懂你的欧美推荐 每日更新35首",
+    "url": "https://music.163.com/#/playlist?id=2829816518",
+    "cover": "/img/music/playlist.jpg",
+    "coverSource": "https://p1.music.126.net/kBUPrLfB9-OZXHrf8aVbSw==/109951168609048221.jpg?imageView=1&thumbnail=800y800&enlarge=1%7CimageView=1&watermark&type=1&image=b2JqL3c1bkRrTUtRd3JMRGpEekNtOE9tLzYwNzA1NTM5MjYyLzE0ZjMvMjAyNTUyMDEwMzA0My94MzI0MTc1MDM4NjY0MzUxNS5wbmc=&dx=0&dy=0%7Cwatermark&type=1&image=b2JqL3dvbkRsc0tVd3JMQ2xHakNtOEt4LzI3NjEwNDk3MDYyL2VlOTMvOTIxYS82NjE4LzdhMDc5ZDg0NTYyMDAwZmVkZWJmMjVjYjE4NjhkOWEzLnBuZw==&dx=0&dy=0%7CimageView=1",
+    "tracks": [
+      {
+        "id": "1990208030",
+        "server": "netease",
+        "type": "song",
+        "title": "Rush",
+        "artist": "Ayra Starr",
+        "duration": 185,
+        "cover": "/img/music/playlist.jpg",
+        "url": "https://music.163.com/#/song?id=1990208030",
+        "audio": "https://music.163.com/song/media/outer/url?id=1990208030.mp3"
+      },
+      {
+        "id": "1987485312",
+        "server": "netease",
+        "type": "song",
+        "title": "Cough (Odo)",
+        "artist": "Kizz Daniel / Empire",
+        "duration": 176,
+        "cover": "/img/music/playlist.jpg",
+        "url": "https://music.163.com/#/song?id=1987485312",
+        "audio": "https://music.163.com/song/media/outer/url?id=1987485312.mp3"
+      },
+      {
+        "id": "2695150748",
+        "server": "netease",
+        "type": "song",
+        "title": "this is what floating feels like",
+        "artist": "JVKE / Tori Kelly",
+        "duration": 148,
+        "cover": "/img/music/playlist.jpg",
+        "url": "https://music.163.com/#/song?id=2695150748",
+        "audio": "https://music.163.com/song/media/outer/url?id=2695150748.mp3"
+      },
+      {
+        "id": "2759701939",
+        "server": "netease",
+        "type": "song",
+        "title": "Beautiful Spiritual",
+        "artist": "Blue",
+        "duration": 174,
+        "cover": "/img/music/playlist.jpg",
+        "url": "https://music.163.com/#/song?id=2759701939",
+        "audio": "https://music.163.com/song/media/outer/url?id=2759701939.mp3"
+      },
+      {
+        "id": "3392371575",
+        "server": "netease",
+        "type": "song",
+        "title": "Mi Chico (Official - Jason Derulo x Melody)",
+        "artist": "DJ Goja / Jason Derulo / Melody",
+        "duration": 125,
+        "cover": "/img/music/playlist.jpg",
+        "url": "https://music.163.com/#/song?id=3392371575",
+        "audio": "https://music.163.com/song/media/outer/url?id=3392371575.mp3"
+      },
+      {
+        "id": "1887215867",
+        "server": "netease",
+        "type": "song",
+        "title": "Medieval",
+        "artist": "FINNEAS",
+        "duration": 172,
+        "cover": "/img/music/playlist.jpg",
+        "url": "https://music.163.com/#/song?id=1887215867",
+        "audio": "https://music.163.com/song/media/outer/url?id=1887215867.mp3"
+      },
+      {
+        "id": "5251049",
+        "server": "netease",
+        "type": "song",
+        "title": "New Soul",
+        "artist": "Yael Naim",
+        "duration": 225,
+        "cover": "/img/music/playlist.jpg",
+        "url": "https://music.163.com/#/song?id=5251049",
+        "audio": "https://music.163.com/song/media/outer/url?id=5251049.mp3"
+      },
+      {
+        "id": "1380957401",
+        "server": "netease",
+        "type": "song",
+        "title": "Round and Round",
+        "artist": "Geowulf",
+        "duration": 250,
+        "cover": "/img/music/playlist.jpg",
+        "url": "https://music.163.com/#/song?id=1380957401",
+        "audio": "https://music.163.com/song/media/outer/url?id=1380957401.mp3"
+      },
+      {
+        "id": "1141607",
+        "server": "netease",
+        "type": "song",
+        "title": "Baby's Romance",
+        "artist": "Chris Garneau",
+        "duration": 279,
+        "cover": "/img/music/playlist.jpg",
+        "url": "https://music.163.com/#/song?id=1141607",
+        "audio": "https://music.163.com/song/media/outer/url?id=1141607.mp3"
+      },
+      {
+        "id": "503061107",
+        "server": "netease",
+        "type": "song",
+        "title": "Did You Think It Was Right",
+        "artist": "Old Sea Brigade",
+        "duration": 230,
+        "cover": "/img/music/playlist.jpg",
+        "url": "https://music.163.com/#/song?id=503061107",
+        "audio": "https://music.163.com/song/media/outer/url?id=503061107.mp3"
+      }
+    ]
+  }
+}

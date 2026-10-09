@@ -1,0 +1,112 @@
+/* Photography is a separate editorial section; all rules stay within its pages. */
+.photography-page .photo-heading { width: 90%; max-width: 1200px; margin: auto; padding: 64px 0 42px; display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; }
+.photography-page .photo-heading .eyebrow { margin-bottom: 17px; color: var(--accent); font-size: 10px; }
+.photography-page .photo-heading h1 { margin: 0; color: var(--ink); font-size: clamp(32px, 3.5vw, 49px); font-weight: 500; letter-spacing: -1.7px; line-height: 1.4; }
+.photo-heading-serif { margin: 13px 0 0; font: italic 25px/1.4 Georgia,serif; color: var(--muted); }
+.photo-heading-note { margin: 0 0 5px; color: var(--muted); font-size: 12px; line-height: 2; }
+.photography-page .photo-layout { display: block; padding: 0 0 50px; }
+.photography-page .photo-layout > #page, html.hide-aside .photography-page .photo-layout > #page { width: 100%; padding: 0; }
+.photography-page #article-container a { color: var(--ink); text-decoration: none; }
+.photography-page #article-container img { display: block; border-radius: 0; margin: 0; max-width: 100%; }
+[data-theme='dark'] .photography-page img { filter: none; }
+.photo-section-label { display: flex; align-items: center; justify-content: space-between; padding: 17px 0; border-top: 1px solid var(--rule); font: 10px/1.6 monospace; letter-spacing: 1.1px; color: var(--muted); }
+.photo-section-label > :first-child { color: var(--ink); }
+#article-container .photo-section-label h2 { margin: 0; padding: 0; border: 0; font-size: 15px; font-weight: 500; letter-spacing: .5px; }
+.album-feature { display: grid; grid-template-columns: 2.2fr 1fr; background: var(--soft); }
+.album-cover { position: relative; overflow: hidden; background: #d5e2e8; }
+.album-cover img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s ease; }
+.album-feature:hover .album-cover img { transform: scale(1.025); }
+.cover-label { position: absolute; left: 24px; bottom: 22px; color: #fff; font: 9px monospace; letter-spacing: 2px; text-shadow: 0 1px 8px #0008; }
+.album-summary { display: flex; flex-direction: column; justify-content: space-between; padding: 32px 35px; }
+.album-number { font: italic 68px/1 Georgia,serif; color: var(--muted); opacity: .48; }
+.album-summary .eyebrow { margin: 30px 0 12px; font-size: 9px; letter-spacing: 1px; }
+#article-container .album-summary h2 { font-size: 32px; font-weight: 500; margin: 0 0 20px; padding: 0; border: 0; letter-spacing: -1px; }
+#article-container .album-description { font-size: 12px; line-height: 2.1; color: var(--muted); margin-bottom: 30px; }
+.album-open { display: flex; justify-content: space-between; align-items: center; padding-top: 18px; border-top: 1px solid var(--rule); font-size: 11px; }
+.album-open > :last-child { font-size: 25px; color: var(--accent); }
+.photo-glimpses { margin-top: 55px; }
+.glimpse-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 26px; }
+.glimpse > div { overflow: hidden; aspect-ratio: 4 / 3; background: var(--soft); }
+.glimpse img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+.glimpse:hover img { transform: scale(1.035); }
+.glimpse > span { display: block; padding-top: 13px; font-size: 11px; color: var(--muted); }
+.glimpse b { font: 10px monospace; margin-right: 10px; color: var(--accent); }
+.glimpse i { float: right; font-style: normal; }
+.photo-endnote { margin-top: 65px; padding: 23px 0 0; border-top: 1px solid var(--rule); display: flex; align-items: center; justify-content: space-between; gap: 16px; font-size: 11px; color: var(--muted); }
+.photo-endnote > span:last-child { font: italic 18px Georgia,serif; }
+/* Album: original image ratios, small captions and balanced rows. */
+.photography-page .album-heading { display: block; padding-top: 28px; }
+.photo-back { color: var(--muted); font-size: 11px; display: inline-block; margin-bottom: 38px; }
+.photo-back:hover { color: var(--accent); }
+.album-title-row { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; }
+.photo-title-count { font: italic 19px Georgia,serif; color: var(--accent); margin-left: 18px; vertical-align: top; letter-spacing: 0; }
+.album-intro { font-size: 12px; color: var(--muted); }
+.album-intro p { margin: 0 0 12px; }
+.album-intro > span { font-size: 10px; }
+.album-intro b { color: var(--accent); margin: 0 12px; }
+#article-container .photo-frame { margin: 0; min-width: 0; overflow: visible; }
+.photo-open { display: block; position: relative; cursor: zoom-in; background: var(--soft); aspect-ratio: var(--photo-ratio); }
+#article-container .photo-open img { width: 100%; height: auto; aspect-ratio: var(--photo-ratio); object-fit: contain; }
+#article-container .photo-frame figcaption { display: flex; justify-content: space-between; gap: 10px; padding: 12px 0 0; font-size: 10px; line-height: 1.7; color: var(--muted); }
+.photo-frame figcaption b { margin-right: 12px; font: 10px monospace; color: var(--accent); }
+.photo-file { font: 9px/1.9 monospace; letter-spacing: .7px; }
+.photo-expand { position: absolute; right: 17px; bottom: 17px; width: 33px; height: 33px; display: grid; place-items: center; border: 1px solid #ffffff80; background: #1e211e55; color: #fff; font-size: 20px; opacity: 0; transform: translateY(4px); transition: opacity .2s, transform .2s; }
+.photo-open:hover .photo-expand, .photo-open:focus-visible .photo-expand { opacity: 1; transform: none; }
+.series-label { margin-top: 38px; padding: 18px 0; }
+.photo-grid { display: flex; flex-wrap: wrap; gap: 30px 20px; align-items: flex-start; }
+.photo-grid .photo-frame { flex: 0 0 calc(33.333% - 14px); }
+.photo-grid.is-balanced .photo-frame { flex: 0 0 var(--frame-width); }
+.photo-image-error .photo-open::before { content: 'Photo unavailable · Select to retry'; position: absolute; inset: 0; display: grid; place-items: center; padding: 20px; color: var(--muted); font-size: 12px; text-align: center; }
+/* PhotoSwipe controls remain legible in either site theme. */
+.pswp { --pswp-bg: #171a17; --pswp-icon-color: #f6f4eb; --pswp-icon-color-secondary: #171a17; --pswp-icon-stroke-color: #171a17; --pswp-icon-stroke-width: 1px; --pswp-root-z-index: 10000; }
+.pswp img { filter: none !important; }
+.pswp .pswp__button { border-radius: 0; }
+.pswp .pswp__button:focus-visible { outline: 2px solid #e6a082; outline-offset: -5px; }
+.pswp .pswp__counter { font: 12px/60px monospace; letter-spacing: 2px; }
+.pswp__photo-caption { position: absolute; left: 65px; right: 65px; bottom: max(20px,env(safe-area-inset-bottom)); display: flex; align-items: center; justify-content: space-between; gap: 16px; color: #e9e7de; font-size: 12px; pointer-events: auto; }
+.pswp__photo-caption a { color: #c3c7bc; font-size: 11px; text-decoration: none; border-bottom: 1px solid #707568; }
+@media (max-width: 1000px) {
+  .album-summary { padding: 25px; }
+  .album-number { font-size: 48px; }
+  #article-container .album-summary h2 { font-size: 27px; }
+  .album-summary .eyebrow { margin-top: 20px; }
+  .photo-heading-note { font-size: 11px; }
+}
+@media (max-width: 700px) {
+  .photography-page .photo-heading { width: 88%; display: block; padding: 40px 0 28px; }
+  .photography-page .photo-heading h1 { font-size: clamp(28px,6.4vw,40px); letter-spacing: -1px; }
+  .photography-page .photo-heading .eyebrow { font-size: 9px; margin-bottom: 14px; }
+  .photo-heading-serif { font-size: 23px; margin-top: 12px; }
+  .photo-heading-note { margin-top: 20px; }
+  .photo-heading-note br { display: none; }
+  .photography-page .photo-layout { width: 88%; }
+  .album-feature { grid-template-columns: 1fr; }
+  .album-cover { aspect-ratio: 3 / 2; }
+  .album-summary { position: relative; padding: 25px; }
+  .album-number { position: absolute; right: 25px; top: 30px; font-size: 47px; opacity: .3; }
+  .album-summary .eyebrow { margin: 0 0 15px; }
+  #article-container .album-description { margin-bottom: 22px; }
+  .cover-label { left: 15px; bottom: 15px; font-size: 8px; }
+  .photo-glimpses { margin-top: 35px; }
+  .glimpse-grid { grid-template-columns: 1fr; gap: 25px; }
+  .glimpse > div { aspect-ratio: 3 / 2; }
+  .glimpse > span { padding-top: 8px; }
+  .photo-section-label { font-size: 9px; letter-spacing: .3px; }
+  .photography-page .album-heading { padding-top: 24px; }
+  .photo-back { margin-bottom: 28px; }
+  .album-title-row { display: block; }
+  .album-intro { margin-top: 20px; }
+  .album-intro p { margin-bottom: 8px; }
+  .photo-grid { display: block; }
+  .photo-grid .photo-frame { width: 100%; margin-bottom: 28px !important; }
+  #article-container .photo-frame figcaption { padding-top: 9px; }
+  .photo-expand { opacity: 1; transform: none; width: 28px; height: 28px; right: 12px; bottom: 12px; }
+  .photo-endnote { margin-top: 38px; font-size: 10px; }
+  .photo-endnote > span:last-child { font-size: 14px; }
+  .photo-endnote > span:not(:last-child) { display: none; }
+  .series-label { margin-top: 28px; }
+  .pswp__photo-caption { left: 20px; right: 20px; bottom: max(20px,env(safe-area-inset-bottom)); font-size: 11px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .album-cover img, .glimpse img, .photo-expand { transition: none; transform: none !important; }
+}

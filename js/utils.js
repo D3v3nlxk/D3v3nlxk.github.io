@@ -178,7 +178,7 @@ const btf = {
   loadLightbox: ele => {
     const service = GLOBAL_CONFIG.lightbox
 
-    if (service === 'mediumZoom') {
+    if (service === 'mediumZoom' && typeof window.mediumZoom === 'function') {
       mediumZoom(ele, { background: 'var(--zoom-bg)' })
     }
 
@@ -190,6 +190,9 @@ const btf = {
           btf.wrap(i, 'a', { href: dataSrc, 'data-fancybox': 'gallery', 'data-caption': dataCaption, 'data-thumb': dataSrc })
         }
       })
+
+      // A failed optional CDN must not interrupt menus and page initialization.
+      if (typeof window.Fancybox?.bind !== 'function') return
 
       if (!window.fancyboxRun) {
         Fancybox.bind('[data-fancybox]', {

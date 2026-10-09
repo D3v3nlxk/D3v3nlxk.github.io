@@ -1,0 +1,15 @@
+#loading-box.moon-loader { position: fixed; inset: 0; z-index: 10000; overflow: hidden; background: #071726; color: #ecfaff; opacity: 1; visibility: visible; transition: opacity .4s ease, visibility .4s; }
+#loading-box.moon-loader.loaded { opacity: 0; visibility: hidden; pointer-events: none; }
+.moon-loader canvas { position: absolute; left: 0; top: 50%; transform: translateY(-50%); display: block; width: 100%; height: min(100%, 56.25vw); opacity: 0; transition: opacity .15s; }
+.moon-loader.animation-ready canvas { opacity: 1; }
+.moon-loader-footer { position: absolute; bottom: max(30px, env(safe-area-inset-bottom)); left: max(28px, env(safe-area-inset-left)); right: max(28px, env(safe-area-inset-right)); display: flex; align-items: center; justify-content: space-between; gap: 20px; font: 12px/1.5 system-ui, sans-serif; letter-spacing: .12em; }
+.moon-loader-footer span { text-shadow: 0 1px 8px #000; }
+@media (prefers-reduced-motion: reduce) { #loading-box.moon-loader, .moon-loader canvas { transition: none; } .moon-loader canvas { display: none; } }
+/* A missing controller must never leave a permanent cover over the site. */
+#loading-box.moon-loader { animation: moon-loader-failsafe 0s 9s forwards; }
+#loading-box.moon-loader.loaded { animation: none; }
+@keyframes moon-loader-failsafe { to { opacity: 0; visibility: hidden; pointer-events: none; } }
+#loading-box.moon-loader { cursor: pointer; }
+#loading-box.moon-loader:focus-visible { outline: 2px solid #52efff; outline-offset: -8px; }
+.moon-loader-footer { justify-content: center; pointer-events: none; }
+.moon-loader-footer span { font-size: 11px; letter-spacing: .25em; }
