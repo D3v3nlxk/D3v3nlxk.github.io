@@ -99,3 +99,11 @@ Homepage article panels use alternating small rotations, skewed frames and blue/
 - 首篇文章固定使用 `/img/p3r/moon-water.png`；首页主视觉仍独立轮播音律联觉背景。
 - 顶栏始终固定在顶部，桌面保留 80px、手机保留 68px 占位。旧滚动处理器每 300ms 切换的 nav-fixed/nav-visible 状态不再改变顶栏位置、占位或过渡，避免回顶时延迟切换定位造成跳动。
 - 同时关闭原主题 `#nav.show` 和页头的进场位移动画，以及页头的全属性过渡，避免加载/PJAX 与屏幕尺寸变化时影响固定导航。
+
+### OSS 媒体资源
+- P3R 首篇封面、13 张轮播图和两首背景音乐使用 `https://devenlxk.oss-cn-shenzhen.aliyuncs.com`。保留本地副本。
+- 2026-10-09 验证：19 个关键对象返回 200，大小与本地一致；音频支持 Range 206；浏览器可显示图片和读取音频。
+- CNAME `devenlxk.cn-shenzhen.taihangpfm.cn` 证书域名不匹配，未使用。
+- OSS 未返回跨域许可，Spine JSON/atlas/WebGL 纹理仍保持同源加载；图库未迁移。
+
+- 已切换 OSS 的 `/img/p3r/` 和 `/audio/p3r/` 不再纳入 Git，工作目录可保留本地备份。进场动画和图库仍随站点发布。
