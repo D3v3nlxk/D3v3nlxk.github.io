@@ -3,3 +3,8 @@
 # Media served from OSS; retain local copies outside version control.
 /audio/p3r/
 /img/p3r/
+
+# Intro assets hosted on OSS; local copies support localhost previews.
+/img/moon-intro/*.json
+/img/moon-intro/*.atlas
+/img/moon-intro/*.png

@@ -106,4 +106,8 @@ Homepage article panels use alternating small rotations, skewed frames and blue/
 - CNAME `devenlxk.cn-shenzhen.taihangpfm.cn` 证书域名不匹配，未使用。
 - OSS 未返回跨域许可，Spine JSON/atlas/WebGL 纹理仍保持同源加载；图库未迁移。
 
-- 已切换 OSS 的 `/img/p3r/` 和 `/audio/p3r/` 不再纳入 Git，工作目录可保留本地备份。进场动画和图库仍随站点发布。
+- 已切换 OSS 的 `/img/p3r/` 和 `/audio/p3r/` 不再纳入 Git，工作目录可保留本地备份。进场动画运行时代码和图库仍随站点发布。
+
+### 2026-10-10 进场动画迁移
+- 线上从 OSS 加载 Spine JSON、atlas 和 PNG；已验证 GitHub Pages 来源的 CORS 与 WebGL 绘制。
+- localhost/127.0.0.1/IPv6 回环预览使用本地保留副本，避免本地来源尚未获 CORS 许可的问题。资源文件取消 Git 跟踪，运行时与说明保留。
