@@ -116,3 +116,6 @@ Homepage article panels use alternating small rotations, skewed frames and blue/
 - 改版资源的 19 个文件迁到 `https://d3v3nblog.oss-cn-shenzhen.aliyuncs.com`，验证公开读取和线上 CORS 正常。
 - 64 个旧文章图片在新 Bucket 对应路径返回 404，因此保留旧 Bucket 引用。新 CNAME 仍有证书域名不匹配问题，未启用。
 - 实测新 Bucket 防盗链拒绝本地 Referer（403），线上 GitHub Pages 来源的轮播、动画和两曲循环测试通过；本地预览新 OSS 资源需添加 Referer 白名单。
+
+### 旧文章图片迁移完成
+- 64 张旧图片实际位于新 Bucket 的 `img/old/`，携带线上 Referer 逐一验证均为 200。已更新页面、搜索索引及其他代码中的对应旧 URL，删除待迁移清单。
