@@ -111,3 +111,8 @@ Homepage article panels use alternating small rotations, skewed frames and blue/
 ### 2026-10-10 进场动画迁移
 - 线上从 OSS 加载 Spine JSON、atlas 和 PNG；已验证 GitHub Pages 来源的 CORS 与 WebGL 绘制。
 - localhost/127.0.0.1/IPv6 回环预览使用本地保留副本，避免本地来源尚未获 CORS 许可的问题。资源文件取消 Git 跟踪，运行时与说明保留。
+
+### 新 Bucket d3v3nblog
+- 改版资源的 19 个文件迁到 `https://d3v3nblog.oss-cn-shenzhen.aliyuncs.com`，验证公开读取和线上 CORS 正常。
+- 64 个旧文章图片在新 Bucket 对应路径返回 404，因此保留旧 Bucket 引用。新 CNAME 仍有证书域名不匹配问题，未启用。
+- 实测新 Bucket 防盗链拒绝本地 Referer（403），线上 GitHub Pages 来源的轮播、动画和两曲循环测试通过；本地预览新 OSS 资源需添加 Referer 白名单。

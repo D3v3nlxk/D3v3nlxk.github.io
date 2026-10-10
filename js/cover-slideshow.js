@@ -46,7 +46,7 @@
     root.querySelector('[data-cover-next]').addEventListener('click', () => change(1), { signal: abort.signal });
     document.addEventListener('visibilitychange', schedule, { signal: abort.signal });
     reduced.addEventListener('change', () => { paused = reduced.matches; schedule(); }, { signal: abort.signal });
-    listPromise ||= fetch('/data/ambience-covers.json?v=2').then(r => { if (!r.ok) throw new Error('Cover list unavailable'); return r.json(); }).catch(() => []);
+    listPromise ||= fetch('/data/ambience-covers.json?v=3').then(r => { if (!r.ok) throw new Error('Cover list unavailable'); return r.json(); }).catch(() => []);
     listPromise.then(list => { if (!disposed) { slides = list; schedule(); } });
     cleanup = () => { disposed = true; clearTimeout(timer); resize.disconnect(); abort.abort(); };
   }

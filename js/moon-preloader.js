@@ -64,7 +64,7 @@
           const assets = new spine.webgl.AssetManager(gl);
           // Local previews use retained copies; deployed pages load assets from OSS.
           const localPreview = ['localhost', '127.0.0.1', '[::1]'].includes(location.hostname);
-          const assetOrigin = localPreview ? '' : 'https://devenlxk.oss-cn-shenzhen.aliyuncs.com';
+          const assetOrigin = localPreview ? '' : 'https://d3v3nblog.oss-cn-shenzhen.aliyuncs.com';
           const base = assetOrigin + '/img/moon-intro/act54side_nc_intro';
           assets.loadText(base + '.json'); assets.loadTextureAtlas(base + '.atlas');
           const loadDeadline = performance.now() + 7500;

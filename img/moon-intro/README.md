@@ -6,5 +6,5 @@ The original JSON, Atlas and PNG are unchanged. Runtime: /lib/spine/spine-webgl.
 Game artwork copyright belongs to the original rights holders.
 Official preview: https://www.taptap.cn/moment/842457206744944128
 
-Production assets: https://devenlxk.oss-cn-shenzhen.aliyuncs.com/img/moon-intro/
+Production assets: https://d3v3nblog.oss-cn-shenzhen.aliyuncs.com/img/moon-intro/
 JSON, atlas and PNG are ignored by Git. For a fresh local checkout, copy these three assets into this directory to preview the animation on localhost.

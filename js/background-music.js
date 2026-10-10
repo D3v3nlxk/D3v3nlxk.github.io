@@ -1,7 +1,7 @@
 /* A single player outside PJAX's replaced DOM; no visible controls. */
 (() => {
   if (window.blogBackgroundMusic) return;
-  const tracks = ['https://devenlxk.oss-cn-shenzhen.aliyuncs.com/audio/p3r/m_avg2_act54side.wav', 'https://devenlxk.oss-cn-shenzhen.aliyuncs.com/audio/p3r/m_sys_act54side.wav'];
+  const tracks = ['https://d3v3nblog.oss-cn-shenzhen.aliyuncs.com/audio/p3r/m_avg2_act54side.wav', 'https://d3v3nblog.oss-cn-shenzhen.aliyuncs.com/audio/p3r/m_sys_act54side.wav'];
   const audio = new Audio();
   window.blogBackgroundMusic = audio;
   let index = 0;
