@@ -119,3 +119,7 @@ Homepage article panels use alternating small rotations, skewed frames and blue/
 
 ### 旧文章图片迁移完成
 - 64 张旧图片实际位于新 Bucket 的 `img/old/`，携带线上 Referer 逐一验证均为 200。已更新页面、搜索索引及其他代码中的对应旧 URL，删除待迁移清单。
+
+### 2026-10-11 背景音乐改回站内托管
+- 为减少 OSS 流量开销，两首背景音乐恢复 `/audio/p3r/` 同源路径，音频重新纳入 Git 随站点发布。
+- 保持首次交互播放、两曲循环和 PJAX 连续播放；图片和动画继续使用 OSS。
